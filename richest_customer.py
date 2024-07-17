@@ -1,18 +1,24 @@
 #1672.Richest Customer Wealth
 
 class Solution:
-    def maximumWealth(self, nums):
-        max = 0
+    def maximumWealth(self, accounts):
+        '''max = 0  
+
+        mysolutiion starts from here
+        
         sum = 0
-        for i in range(len(nums)):
+        for i in range(len(accounts)):
             sum = 0
-            for j in range(len(nums[i])):
-                sum += nums[i][j] 
+            for j in range(len(accounts[i])):
+                sum += accounts[i][j]
             if sum >= max:
                 max = sum
-        return(max)
+        return max'''
+
+        #found a cool way to solve the problem
+        return max(map(sum, accounts))
+
 
 s = Solution()
-nums = [[1,5],[7,3],[3,5]]
-print(s.maximumWealth(nums))
-        
+accounts = [[1, 2, 3], [3, 2, 1]]
+print(s.maximumWealth(accounts))
